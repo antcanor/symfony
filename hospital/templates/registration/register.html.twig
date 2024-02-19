@@ -1,0 +1,22 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Register</h1>
+    <a href="{{ path('home') }}">
+        <h4>Cancelar</h4>
+    </a>
+    {% endblock %}
+    
+
+    {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Contraseña'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn">Register</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}

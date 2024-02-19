@@ -1,0 +1,11 @@
+<ul>
+    {% for item in menus %}
+    
+        <li id="current" style="border:none">
+         
+             <a href="{{ path(item.enlace) }}">{{item.titulo}}</a>
+        </li>
+    
+    {% endfor %}
+    </ul>
+    

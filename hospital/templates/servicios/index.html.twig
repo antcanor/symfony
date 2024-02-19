@@ -1,0 +1,13 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Servicios</h1>
+    {% endblock %}
+    
+        {% for servicio in listaServicios %}
+            <a href="{{ path('info_servicio', {'id': servicio.id}) }}"><h2>{{ servicio.especialidad.especialidad}}</h2></a>
+            
+        {% endfor %}
+    
+
+{% endblock %}

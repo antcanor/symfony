@@ -1,0 +1,11 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Servicios</h1>
+    {% endblock %}
+        <h2>{{ servicio.especialidad.especialidad}}</h2></a>
+        {{servicio.info | raw}}
+        <img src="{{ asset(servicio.foto) }}" alt="{{ servicio.especialidad.especialidad }}" width="45%">
+
+        <a href="{{ path('lista_servicios') }}">Volver</a>
+{% endblock %}

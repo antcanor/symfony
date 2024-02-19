@@ -1,0 +1,14 @@
+{# templates/cuadro_medico/medicos_por_especialidad.html.twig #}
+ {% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Médicos en {{ especialidad.especialidad }}</h1>
+    <a href="{{ path('lista_especialidades') }}">Volver</a>
+    {% endblock %}
+    <ul>
+        {% for medico in medicos %}
+            <li>{{ medico.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %} 

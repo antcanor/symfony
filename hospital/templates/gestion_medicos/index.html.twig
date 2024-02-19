@@ -1,0 +1,35 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Gestión Médicos</h1>
+    <a href="{{ path('crear_medico') }}">
+        <h4>Dar de alta a un nuevo médico</h4>
+    </a>
+    {% endblock %}
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Especialidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medico in listaMedicos %}
+                <tr>
+                    <td>{{medico.id}}</td>
+                    <td>{{medico.nombre}}</td>
+                    <td><ul>
+                        {% for especialidad in medico.especialidad %}
+                        <li>{{ especialidad.especialidad }}</li>
+                        {% endfor %}
+                    </ul></td>
+                    <td><a href="{{ path('borrar_medico', {'id': medico.id}) }}">Eliminar</a>
+                        <a href="{{ path('actualizar_medico', {'id': medico.id}) }}">Modificar</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Candidatura Enviada</h1>
+    {% endblock %}
+    <h3>{{bolsa.nombre}}, su candidatura para el puesto de {{bolsa.puesto.tipo}}, ha sido enviada a nuestro <b>departamento de Recursos Humanos</b>. En breve nos pondremos en contacto con usted.</h3>
+    <a href="{{ path('home') }}">Volver al Inicio</a>
+    <a href="{{ path('bolsa') }}">Postularse para otro puesto</a>
+
+{% endblock %}

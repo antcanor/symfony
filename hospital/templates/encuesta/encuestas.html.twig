@@ -1,0 +1,14 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+
+
+<h1>Encuestas<h1>
+<ul>
+{% for item in encuestas %}
+	
+	<li><a href="{{ path( "encuesta", { "id": item.id} ) }}">{{  item.name  }} </li>
+	
+	</li>
+{% endfor %}
+<ul>
+{% endblock %}

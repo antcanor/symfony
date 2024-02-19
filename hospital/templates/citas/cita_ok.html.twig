@@ -1,0 +1,10 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Citas Enviada</h1>
+    {% endblock %}
+    <h3>La cita ha sido enviada a nuestro departamento de <b>Gestión de Citas</b>. En breve le llegará un correo confirmandole la fecha y hora de su próxima cita.</h3>
+    <a href="{{ path('home') }}">Volver al Inicio</a>
+    <a href="{{ path('citas') }}">Pedir otra Cita</a>
+
+{% endblock %}

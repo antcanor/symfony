@@ -1,0 +1,15 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Actualización Médicos</h1>
+    {% endblock %}
+    {{ form_errors(form) }}
+
+    {{ form_start(form) }}
+        {{ form_row(form.nombre) }}
+        {{ form_row(form.especialidad) }}
+
+        <button type="submit" class="btn">Guardar</button>
+    {{ form_end(form) }}
+    <a href="{{ path('lista_medicos') }}">Cancelar</a>
+{% endblock %}

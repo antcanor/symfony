@@ -1,0 +1,20 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Citas Hospital José Planes</h1>
+    {% endblock %}
+    
+            {{ form_errors(form) }}
+            {{ form_start(form) }}
+                {{ form_row(form.nombre) }}
+                {{ form_row(form.dni) }}
+                {{ form_row(form.direccion) }}
+                {{ form_row(form.telefono) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.caso) }}
+                {{ form_row(form.especialidad) }}
+                <button type="submit" class="btn">Pedir Cita</button>
+            {{ form_end(form) }}
+            <a href="{{ path('home') }}">Cancelar</a>
+        
+{% endblock %}

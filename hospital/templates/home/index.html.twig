@@ -1,0 +1,18 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Bienvenido al Hospital Jose Planes</h1>
+    
+    {% endblock %}
+    <section>
+        <div>
+            <p>Servicio de atención médica de alta calidad en todas las especialidades</p>
+            <a href="{{ path('citas') }}" class="btn"><h3>Pide cita ahora</h3></a>
+            <a href="{{ path('lista_servicios') }}" class="btn"><h3>Nuestros Servicios</h3></a>
+            <a href="{{ path('lista_especialidades') }}" class="btn"><h3>Nuestros profesionales</h3></a>
+        </div>
+    </section>
+
+
+
+{% endblock %}

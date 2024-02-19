@@ -1,0 +1,12 @@
+{% extends 'default.html.twig' %}
+{% block contenido %}
+    {% block titulo %}
+    <h1>Cuadro Médico</h1>
+    {% endblock %}
+    <ul>
+        {% for especialidad in listaEspecialidad %}
+            <li><a href="{{ path('medicos_especialidad', {'id': especialidad.id}) }}">{{ especialidad.especialidad }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
